@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Menu | MANN BUNS</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/menu.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <div class="logo-icon">
+                M
+            </div>
+
+            <span>
+
+                MANN <span class="accent"> BUNS </span>
+
+            </span>
+
+        </a>
+
+
+
+        <!-- NAVIGATION LINKS -->
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+
+                Home
+
+            </a>
+
+
+            <a
+                href="menu.html"
+                class="active"
+            >
+
+                Menu
+
+            </a>
+
+
+            <a href="index.html#about">
+
+                About
+
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="cart-link"
+            >
+
+                Cart
+
+                <span id="cart-count">
+
+                    0
+
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- ORDER BUTTON -->
+
+        <a
+            href="#burger-menu"
+            class="order-now"
+        >
+
+            Order now
+
+            <span>↗</span>
+
+        </a>
+
+
+    </header>
+
+
+
+    <!-- =========================
+         MENU HERO
+    ========================== -->
+
+    <section class="menu-hero">
+
+
+        <div class="menu-eyebrow">
+
+            <span></span>
+
+            BURGERBITE MENU
+
+        </div>
+
+
+
+        <h1>
+
+            Pick your
+
+            <span>
+                perfect bite.
+            </span>
+
+        </h1>
+
+
+
+        <p>
+
+            From legendary classics to crispy chicken
+            and plant-based favorites.
+
+            Every burger is made fresh when you order.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         MENU SECTION
+    ========================== -->
+
+    <section
+        class="menu-section"
+        id="burger-menu"
+    >
+
+
+        <!-- MENU TOP -->
+
+        <div class="menu-top">
+
+
+            <div>
+
+
+                <span class="small-label">
+
+                    EXPLORE THE MENU
+
+                </span>
+
+
+
+                <h2>
+
+                    Eight burgers.
+
+                    <br>
+
+                    <span>
+
+                        Zero boring bites.
+
+                    </span>
+
+                </h2>
+
+
+            </div>
+
+
+
+            <!-- FILTER BUTTONS -->
+
+            <div class="menu-filters">
+
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+
+                    All
+
+                </button>
+
+
+
+                <button
+                    class="filter-btn"
+                    data-filter="smash"
+                >
+
+                    Smash Burgers
+
+                </button>
+
+
+
+                <button
+                    class="filter-btn"
+                    data-filter="chicken"
+                >
+
+                    Chicken
+
+                </button>
+
+
+
+                <button
+                    class="filter-btn"
+                    data-filter="classic"
+                >
+
+                    Classics
+
+                </button>
+
+
+
+                <button
+                    class="filter-btn"
+                    data-filter="plant"
+                >
+
+                    Plant-Based
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             BURGER GRID
+
+             THIS IS WHERE
+             menu.js ADDS THE BURGERS
+        ========================== -->
+
+        <div
+            class="burger-grid"
+            id="menu-grid"
+        >
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+
+            <div class="logo-icon">
+
+                B
+
+            </div>
+
+
+            <span>
+
+                MANN<span class="accent">BUNS</span>
+
+            </span>
+
+
+        </a>
+
+
+
+        <p>
+
+            Big flavor. No shortcuts.
+
+        </p>
+
+
+    </footer>
+
+
+
+    
+    <!-- Firebase libraries -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <!-- Firebase connection -->
+    <script src="js/firebase.js"></script>
+
+    <!-- Existing burger menu code -->
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>

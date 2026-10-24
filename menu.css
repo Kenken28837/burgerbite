@@ -1,0 +1,1228 @@
+/* =========================
+   BURGERBITE MENU
+========================= */
+
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(255, 107, 26, 0.08),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 10% 40%,
+            rgba(255, 107, 26, 0.04),
+            transparent 30%
+        ),
+        #111111;
+}
+
+
+/* =========================
+   MENU HERO
+========================= */
+
+.menu-hero {
+    position: relative;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 120px 55px 100px;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid #2a2a2a;
+}
+
+
+/* Decorative background text */
+
+.menu-hero::before {
+    content: "BURGERBITE";
+
+    position: absolute;
+
+    top: 40px;
+    right: -30px;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    font-size: clamp(100px, 18vw, 300px);
+
+    font-weight: 800;
+
+    letter-spacing: -12px;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+}
+
+
+/* Orange glow */
+
+.menu-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: -250px;
+    right: 10%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 107, 26, 0.14),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   MENU EYEBROW
+========================= */
+
+.menu-eyebrow {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+
+    color: #ff6b1a;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+}
+
+
+.menu-eyebrow span {
+    display: block;
+
+    width: 38px;
+    height: 1px;
+
+    background: #ff6b1a;
+
+    box-shadow:
+        0 0 12px
+        rgba(255, 107, 26, 0.8);
+}
+
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.menu-hero h1 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 950px;
+
+    margin: 0;
+
+    color: #eeeeee;
+
+    font-size: clamp(65px, 9vw, 135px);
+
+    font-weight: 800;
+
+    line-height: 0.88;
+
+    letter-spacing: -6px;
+}
+
+
+.menu-hero h1 span {
+    display: block;
+
+    color: #ff6b1a;
+
+    text-shadow:
+        0 10px 35px
+        rgba(255, 107, 26, 0.15);
+}
+
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+.menu-hero p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 620px;
+
+    margin-top: 38px;
+
+    color: #999999;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================
+   MENU SECTION
+========================= */
+
+.menu-section {
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 100px 55px 130px;
+}
+
+
+/* =========================
+   MENU TOP
+========================= */
+
+.menu-top {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    margin-bottom: 65px;
+}
+
+
+.small-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #ff6b1a;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+}
+
+
+.menu-top h2 {
+    margin: 0;
+
+    color: #eeeeee;
+
+    font-size: clamp(50px, 5vw, 82px);
+
+    font-weight: 800;
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.menu-top h2 span {
+    color: #ff6b1a;
+}
+
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.menu-filters {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.filter-btn {
+    position: relative;
+
+    min-height: 54px;
+
+    padding: 0 25px;
+
+    overflow: hidden;
+
+    border: 1px solid #303030;
+
+    background:
+        rgba(255, 255, 255, 0.015);
+
+    color: #9a9a9a;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+/* Hover shine */
+
+.filter-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.08),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.5s ease;
+}
+
+
+.filter-btn:hover::before {
+    left: 130%;
+}
+
+
+.filter-btn:hover {
+    border-color: #ff6b1a;
+
+    color: #ff6b1a;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.filter-btn.active {
+    border-color: #ff6b1a;
+
+    background: #ff6b1a;
+
+    color: #111111;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 30px
+        rgba(255, 107, 26, 0.18);
+}
+
+
+.filter-btn:active {
+    transform:
+        scale(0.96);
+}
+
+
+/* =========================
+   BURGER GRID
+========================= */
+
+.burger-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 32px;
+}
+
+
+/* =========================
+   BURGER CARD
+========================= */
+
+.burger-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid #292929;
+
+    background:
+        linear-gradient(
+            145deg,
+            #202020,
+            #181818
+        );
+
+    transition:
+        transform 0.4s cubic-bezier(.2, .8, .2, 1),
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Orange glow border */
+
+.burger-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border: 1px solid transparent;
+
+    pointer-events: none;
+
+    transition:
+        border-color 0.35s ease;
+}
+
+
+.burger-card:hover {
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(255, 107, 26, 0.6);
+
+    box-shadow:
+        0 30px 70px
+        rgba(0, 0, 0, 0.45),
+
+        0 0 45px
+        rgba(255, 107, 26, 0.08);
+}
+
+
+/* =========================
+   BURGER IMAGE
+========================= */
+
+.burger-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 440px;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+
+/* Image */
+
+.burger-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+       IMPORTANT:
+       Keeps the burger centered.
+    */
+
+    object-position:
+        center center;
+
+    transform:
+        scale(1.01);
+
+    transition:
+        transform 0.7s
+        cubic-bezier(.2, .8, .2, 1);
+}
+
+
+.burger-card:hover
+.burger-image img {
+    transform:
+        scale(1.08);
+}
+
+
+/* Cinematic gradient */
+
+.burger-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+
+            rgba(0, 0, 0, 0.05),
+
+            rgba(0, 0, 0, 0.05)
+            55%,
+
+            rgba(0, 0, 0, 0.65)
+        );
+
+    pointer-events: none;
+}
+
+
+/* Orange side glow */
+
+.burger-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    bottom: -180px;
+    right: -120px;
+
+    z-index: 1;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 107, 26, 0.25);
+
+    filter:
+        blur(70px);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   BURGER NUMBER
+========================= */
+
+.burger-number {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    min-width: 48px;
+
+    height: 40px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(10, 10, 10, 0.75);
+
+    backdrop-filter:
+        blur(10px);
+
+    color: #d8d8d8;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   BURGER TAG
+========================= */
+
+.burger-tag {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 20px;
+    right: 20px;
+
+    padding: 11px 16px;
+
+    background: #ff6b1a;
+
+    color: #111111;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(255, 107, 26, 0.2);
+}
+
+
+/* =========================
+   BURGER INFO
+========================= */
+
+.burger-info {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #202020,
+            #191919
+        );
+}
+
+
+/* =========================
+   BURGER TOP
+========================= */
+
+.burger-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.burger-category {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8f8f8f;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.burger-top h2 {
+    margin: 0;
+
+    color: #f1f1f1;
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+}
+
+
+.burger-price {
+    flex-shrink: 0;
+
+    padding-top: 18px;
+
+    color: #ff6b1a;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   BURGER DESCRIPTION
+========================= */
+
+.burger-description {
+    min-height: 72px;
+
+    margin:
+        20px 0
+        28px;
+
+    color: #969696;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================
+   ADD TO CART BUTTON
+========================= */
+
+.add-to-cart {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    min-height: 66px;
+
+    margin-top: auto;
+
+    padding: 0 24px;
+
+    overflow: hidden;
+
+    border: 1px solid #393939;
+
+    background:
+        rgba(255, 255, 255, 0.015);
+
+    color: #eeeeee;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Button background animation */
+
+.add-to-cart::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #ff6b1a;
+
+    transform:
+        translateX(-101%);
+
+    transition:
+        transform 0.35s
+        cubic-bezier(.2, .8, .2, 1);
+
+    z-index: 0;
+}
+
+
+.add-to-cart span,
+.add-to-cart .button-plus {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.add-to-cart:hover::before {
+    transform:
+        translateX(0);
+}
+
+
+.add-to-cart:hover {
+    border-color: #ff6b1a;
+
+    color: #111111;
+}
+
+
+/* =========================
+   BUTTON PLUS
+========================= */
+
+.button-plus {
+    color: #ff6b1a;
+
+    font-size: 25px;
+
+    font-weight: 300;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.add-to-cart:hover
+.button-plus {
+    color: #111111;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================
+   ADDED STATE
+========================= */
+
+.add-to-cart.added {
+    border-color: #ff6b1a;
+
+    background: #ff6b1a;
+
+    color: #111111;
+}
+
+
+.add-to-cart.added::before {
+    transform:
+        translateX(0);
+}
+
+
+.add-to-cart.added
+.button-plus {
+    color: #111111;
+
+    transform:
+        rotate(45deg);
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.burger-grid:empty::after {
+    content:
+        "Loading something delicious...";
+
+    display: block;
+
+    padding: 80px;
+
+    color: #777777;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    text-align: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 50px 55px;
+
+    border-top:
+        1px solid #292929;
+}
+
+
+.footer p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.menu-hero {
+    animation:
+        fadeUp 0.7s ease both;
+}
+
+
+.burger-card {
+    animation:
+        fadeUp 0.6s ease both;
+}
+
+
+/* Slight stagger effect */
+
+.burger-card:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.burger-card:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.burger-card:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+.burger-card:nth-child(5) {
+    animation-delay: 0.32s;
+}
+
+.burger-card:nth-child(6) {
+    animation-delay: 0.40s;
+}
+
+.burger-card:nth-child(7) {
+    animation-delay: 0.48s;
+}
+
+.burger-card:nth-child(8) {
+    animation-delay: 0.56s;
+}
+
+
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media (min-width: 1500px) {
+
+    .burger-image {
+        height: 500px;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .menu-hero {
+        padding:
+            100px 35px
+            85px;
+    }
+
+
+    .menu-section {
+        padding:
+            85px 35px
+            110px;
+    }
+
+
+    .menu-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .menu-filters {
+        justify-content: flex-start;
+    }
+
+
+    .burger-image {
+        height: 360px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .menu-hero {
+        padding:
+            85px 20px
+            70px;
+    }
+
+
+    .menu-section {
+        padding:
+            70px 20px
+            90px;
+    }
+
+
+    .menu-hero::before {
+        font-size: 110px;
+
+        top: 70px;
+
+        right: -100px;
+
+        letter-spacing: -6px;
+    }
+
+
+    .menu-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .menu-hero h1 {
+        font-size:
+            clamp(
+                58px,
+                16vw,
+                90px
+            );
+
+        letter-spacing: -3px;
+    }
+
+
+    .menu-hero p {
+        font-size: 15px;
+    }
+
+
+    .menu-top {
+        gap: 35px;
+    }
+
+
+    .menu-top h2 {
+        font-size:
+            clamp(
+                46px,
+                14vw,
+                68px
+            );
+
+        letter-spacing: -3px;
+    }
+
+
+    .burger-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 25px;
+    }
+
+
+    .burger-image {
+        height: 380px;
+    }
+
+
+    .burger-info {
+        padding:
+            26px 22px
+            24px;
+    }
+
+
+    .burger-top h2 {
+        font-size: 27px;
+    }
+
+
+    .burger-description {
+        min-height: auto;
+
+        font-size: 13px;
+    }
+
+
+    .filter-btn {
+        min-height: 48px;
+
+        padding:
+            0 17px;
+
+        font-size: 11px;
+    }
+
+
+    .footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding:
+            40px 20px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 430px) {
+
+    .menu-filters {
+        width: 100%;
+
+        gap: 7px;
+    }
+
+
+    .filter-btn {
+        flex-grow: 1;
+
+        padding:
+            0 12px;
+
+        font-size: 10px;
+    }
+
+
+    .burger-image {
+        height: 320px;
+    }
+
+
+    .burger-number {
+        top: 14px;
+        left: 14px;
+    }
+
+
+    .burger-tag {
+        top: 14px;
+        right: 14px;
+
+        padding:
+            9px 11px;
+
+        font-size: 8px;
+    }
+
+}

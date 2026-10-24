@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart | BurgerBite</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-icon">M</div>
+
+            <span>
+                MANN<span class="accent"> BUNS</span>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="menu.html">Menu</a>
+
+            <a href="index.html#about">About</a>
+
+            <a href="cart.html" class="cart-link active">
+
+                Cart
+
+                <span id="cart-count">0</span>
+
+            </a>
+
+        </nav>
+
+
+        <a href="menu.html" class="order-now">
+
+            Continue shopping <span>↗</span>
+
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         CART HEADER
+    ========================== -->
+
+    <main class="cart-page">
+
+        <section class="cart-header">
+
+            <div class="cart-eyebrow">
+
+                <span></span>
+
+                YOUR ORDER
+
+            </div>
+
+
+            <h1>
+                Your <span>bite list.</span>
+            </h1>
+
+
+            <p>
+                Review your order before heading to checkout.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CART CONTENT
+        ========================== -->
+
+        <section class="cart-layout">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="cart-items-section">
+
+                <div class="cart-section-top">
+
+                    <span id="cart-item-text">
+                        Your items
+                    </span>
+
+                    <button id="clear-cart-btn">
+                        Clear cart
+                    </button>
+
+                </div>
+
+
+                <!-- CART ITEMS APPEAR HERE -->
+
+                <div id="cart-items">
+
+                </div>
+
+
+                <!-- EMPTY CART -->
+
+                <div id="empty-cart" class="empty-cart hidden">
+
+                    <div class="empty-cart-icon">
+                        🍔
+                    </div>
+
+                    <h2>
+                        Your cart is empty.
+                    </h2>
+
+                    <p>
+                        Looks like you haven't picked your
+                        next favorite burger yet.
+                    </p>
+
+                    <a href="menu.html" class="shop-button">
+
+                        Explore the menu
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <aside class="order-summary">
+
+                <span class="summary-label">
+                    ORDER SUMMARY
+                </span>
+
+
+                <h2>
+                    Ready to eat?
+                </h2>
+
+
+                <div class="summary-line">
+
+                    <span>Subtotal</span>
+
+                    <strong id="subtotal">
+                        ₱0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line">
+
+                    <span>Delivery</span>
+
+                    <strong id="delivery">
+                        ₱49
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line total-line">
+
+                    <span>Total</span>
+
+                    <strong id="total">
+                        ₱0
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="checkout.html"
+                    id="checkout-btn"
+                    class="checkout-button"
+                >
+
+                    Proceed to checkout
+
+                    <span>→</span>
+
+                </a>
+
+
+                <a href="menu.html" class="continue-link">
+
+                    ← Continue shopping
+
+                </a>
+
+
+                <div class="delivery-note">
+
+                    <span>⚡</span>
+
+                    <p>
+                        Freshly made when you order.
+                        Estimated delivery: 25–40 minutes.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-icon">B</div>
+
+            <span>
+                MANN <span class="accent">BUNS</span>
+            </span>
+
+        </a>
+
+
+        <p>
+            rhodzkie.
+        </p>
+
+    </footer>
+
+
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>

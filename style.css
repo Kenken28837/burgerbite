@@ -1,0 +1,509 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(255, 107, 26, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(255, 107, 26, 0.04),
+            transparent 25%
+        ),
+        #111111;
+
+    color: #f2f0ed;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+
+/* =========================
+   GLOBAL VARIABLES
+========================= */
+
+:root {
+    --background: #111111;
+
+    --background-light: #181818;
+
+    --background-lighter: #222222;
+
+    --card: #1c1c1c;
+
+    --text: #f2f0ed;
+
+    --text-muted: #999999;
+
+    --orange: #ff6b1a;
+
+    --orange-light: #ff823b;
+
+    --orange-dark: #d94f0b;
+
+    --border: #2c2c2c;
+
+    --max-width: 1250px;
+}
+
+
+/* =========================
+   GLOBAL SELECTION
+========================= */
+
+::selection {
+    background: var(--orange);
+
+    color: #111111;
+}
+
+
+::-moz-selection {
+    background: var(--orange);
+
+    color: #111111;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #111111;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #343434;
+
+    border-radius: 20px;
+
+    border: 2px solid #111111;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--orange);
+}
+
+
+/* =========================
+   GLOBAL LINKS
+========================= */
+
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 22px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 100;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.7px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.logo:hover {
+    transform:
+        translateY(-2px);
+}
+
+
+.logo-icon {
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--orange-light),
+            var(--orange)
+        );
+
+    color: #111111;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    transform:
+        skew(-10deg);
+
+    box-shadow:
+        0 6px 20px rgba(255, 107, 26, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.logo:hover .logo-icon {
+    transform:
+        skew(-10deg)
+        rotate(-5deg)
+        scale(1.08);
+
+    box-shadow:
+        0 10px 28px rgba(255, 107, 26, 0.35);
+}
+
+
+.accent {
+    color: var(--orange);
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+
+.nav-links a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #9d9d9d;
+
+    font-size: 14px;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.nav-links a:not(.cart-link)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--orange);
+
+    transition:
+        width 0.25s ease;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =========================
+   CART LINK
+========================= */
+
+.cart-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* =========================
+   CART COUNT
+========================= */
+
+#cart-count {
+    width: 21px;
+
+    height: 21px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--orange-light),
+            var(--orange)
+        );
+
+    color: #111111;
+
+    border-radius: 50%;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 4px 14px rgba(255, 107, 26, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.cart-link:hover #cart-count {
+    transform:
+        scale(1.15);
+
+    box-shadow:
+        0 6px 20px rgba(255, 107, 26, 0.4);
+}
+
+
+/* =========================
+   ORDER NOW BUTTON
+========================= */
+
+.order-now {
+    position: relative;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    padding: 10px 0;
+
+    border-bottom:
+        1px solid var(--orange);
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.order-now span {
+    display: inline-block;
+
+    color: var(--orange);
+
+    margin-left: 8px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.order-now:hover {
+    color: var(--orange);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.order-now:hover span {
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================
+   GLOBAL FOCUS STATES
+========================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline:
+        2px solid var(--orange);
+
+    outline-offset:
+        4px;
+}
+
+
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 18px 20px;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.04);
+    }
+
+
+    .logo {
+        font-size: 17px;
+    }
+
+
+    .logo-icon {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 17px;
+    }
+
+
+    .nav-links {
+        gap: 14px;
+    }
+
+
+    .nav-links a:not(.cart-link) {
+        display: none;
+    }
+
+
+    .order-now {
+        display: none;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        padding-left: 14px;
+
+        padding-right: 14px;
+    }
+
+
+    .logo {
+        gap: 8px;
+
+        font-size: 15px;
+    }
+
+
+    .logo-icon {
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 15px;
+    }
+
+}
+
